@@ -2,6 +2,15 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  user-select: none;
+  font-family: "Courier New", Courier, monospace;
+}
+
+:root {
+  --dark-brown: #67595e;
+  --light-brown: #a49393;
+  --dusty-rose: #eed6d3;
+  --rose: #e8b4b8;
 }
 
 main {
@@ -10,18 +19,18 @@ main {
   height: 100vh;
   justify-content: center;
   align-items: center;
+  background: var(--dusty-rose);
 }
 
 .container {
   display: flex;
   flex-direction: column;
-  background: rgb(255, 198, 0);
-  width: 400px;
+  background: var(--rose);
+  width: 500px;
   height: 600px;
   align-items: center;
   justify-content: space-evenly;
-  border-radius: 20px;
-  box-shadow: 0 0 10px black;
+  border-radius: 10px;
 }
 
 .title {
@@ -30,9 +39,12 @@ main {
   align-items: center;
   width: 100%;
   height: 50px;
-  font: bold 2.5rem serif;
-  border-bottom: solid 5px black;
-  margin-bottom: 20px;
+  font-size: 2.5rem;
+  font-weight: bold;
+  padding-bottom: 20px;
+  border-bottom: solid 2px black;
+  margin-bottom: 5px;
+  letter-spacing: 2px;
 }
 
 .input {
@@ -42,29 +54,37 @@ main {
   justify-content: space-between;
   align-items: center;
 }
+
 .input input {
   width: 200px;
   height: 50px;
   border-radius: 5px;
   border: none;
   outline: 0;
+  font-size: 1.5rem;
+  font-weight: bold;
   font: bold 1.5rem serif;
   text-align: center;
+  letter-spacing: 1px;
 }
 
 .input label {
-  font: bold 1.5rem serif;
+  font-size: 1.5rem;
+  font-weight: bold;
+  letter-spacing: 1px;
 }
 
 button {
   width: 300px;
   height: 40px;
-  font: bold 1.2rem serif;
-  background: #000;
-  color: rgb(255, 198, 0);
+  font-size: 1.2rem;
+  font-weight: bold;
+  background: var(--light-brown);
+  color: var(--dark-brown);
   outline: none;
   border-radius: 5px;
   cursor: pointer;
+  letter-spacing: 1px;
 }
 
 .result {
@@ -74,11 +94,11 @@ button {
   width: 300px;
   height: 150px;
   border-radius: 5px;
-  font: italic 1.5rem serif;
-  box-shadow: 0px 0px 10px black;
-  background: #000;
-  color: rgb(255, 198, 0);
+  font-size: 1.5rem;
+  font-style: italic;
+  background: var(--dusty-rose);
+  color: var(--dark-brown);
   padding: 20px;
   box-sizing: border-box;
-  user-select: none;
+  letter-spacing: 1px;
 }
